@@ -1,0 +1,55 @@
+extends layout
+
+block append head
+  link(rel='stylesheet', href='/stylesheets/moment.css')
+  link(rel='stylesheet', href='/stylesheets/chat.css')
+  script(type='text/javascript')
+    var host = "#{host}";
+  script(src='/javascripts/jquery.js')
+  script(src='/javascripts/chat.js')
+  script(src='/javascripts/moment.js')
+  script(src='http://#{host}:8001/socket.io/socket.io.js')
+
+block content
+  
+  .page_wrapper
+    .moment_wrapper
+      #flash_div
+        object(classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000', width='100%', height='100%', id='MySubscriberObject', align='middle', name='MySubscriber')
+          param(name='movie', value='/swf/MySubscriber.swf')
+          param(name='AllowScriptAccess', value'always')
+          param(name='quality', value='high')
+          param(name='scale', value='noscale')
+          param(name='salign', value='lt')
+          param(name='bgcolor', value='#000000')
+          param(name='allowfullscreen', value='true')
+          embed(id='MySubscriberEmbed',
+            name='MySubscriber',
+            src='/swf/MySubscriber.swf'
+            width='100%',
+            height='100%',
+            AllowScriptAccess='always',
+            AllowFullScreen='true',
+            quality='high',
+            scale='noscale',
+            salign='lt',
+            bgcolor='#000000',
+            )
+
+    #container-nodechat
+      #log-nodechat
+      #control-nodechat
+        Мой ник 
+        input(type="text", id="nick-nodechat", size="9", value="guest")
+        | :
+        input(type="text", id="input", autofocus, size="60") 
+        input(type="submit", id="send", value="Send")
+        script
+          var nick = chat_generate_nick(); 
+          document.getElementById('nick-nodechat').value = nick;
+          chat_create_nodejs(nick); 
+
+    #menu
+      #menu_wrapper
+        #menu_wrapper2 Channels
+

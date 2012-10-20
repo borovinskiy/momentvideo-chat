@@ -1,0 +1,40 @@
+#container-nodechat {
+  height: 30%;
+  padding-right: 210px;
+}
+#control-nodechat {
+  height: 20%;
+}
+#log-nodechat {
+    min-height: 100px;
+    height: 70%;
+    border: 1px solid rgb(192, 192, 192);
+    padding: 5px;
+    margin-bottom: 5px;
+    font: 11pt 'Palatino Linotype';
+    overflow: auto;
+}
+#input {
+    width: 500px;
+}
+#send {
+    width: 100px;
+}
+
+.in-nodechat {
+    color: rgb(0, 0, 0);
+}
+.out-nodechat {
+    color: rgb(0, 0, 0);
+}
+.time-nodechat {
+    color: #ccc;
+    font: 10pt 'Courier New';
+}
+.system-nodechat {
+    color: rgb(165, 42, 42);
+}
+.user-nodechat {
+    color: #555;
+}
+
