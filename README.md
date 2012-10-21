@@ -2,20 +2,23 @@ Simple unmanaged text chat on nodejs and socket.io for rtmp server Moment.
 http://momentvideo.org/
 
 ## Installation
-* install nodejs http://nodejs.org
+* install http://nodejs.org
 * download and unpack this chat
-* cd to this chat
-* install nodejs modules jade, socket.io, express
+* cd to chat
+* install nodejs modules jade, socket.io, express:
+
 ```bash
 $ npm install jade socket.io express
 ```
 
 ## How to use
 * edit app.js for change host (interface), port, and channel list
-* run chat
+* run chat:
+
 ```bash
 $ node app.js
 ```
+
 * goto http://example.com:3000/moment
 
 ## notice
