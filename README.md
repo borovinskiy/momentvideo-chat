@@ -10,7 +10,7 @@ http://momentvideo.org/
 * install nodejs modules jade, socket.io, express:
 
 ```bash
-$ npm install jade socket.io express
+$ npm install express@3.x jade socket.io
 ```
 
 ## How to use
