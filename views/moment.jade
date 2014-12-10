@@ -3,8 +3,8 @@ extends layout
 block append head
   link(rel='stylesheet', href='/stylesheets/moment.css')
   link(rel='stylesheet', href='/stylesheets/chat.css')
-  script(type='text/javascript')
-    var host = "#{host}";
+  script(type='text/javascript').
+    host = "#{host}";
   script(src='/javascripts/jquery.js')
   script(src='/javascripts/chat.js')
   script(src='/javascripts/moment.js')
@@ -17,7 +17,7 @@ block content
       #flash_div
         object(classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000', width='100%', height='100%', id='MySubscriberObject', align='middle', name='MySubscriber')
           param(name='movie', value='/swf/MySubscriber.swf')
-          param(name='AllowScriptAccess', value'always')
+          param(name='AllowScriptAccess', value='always')
           param(name='quality', value='high')
           param(name='scale', value='noscale')
           param(name='salign', value='lt')
@@ -44,7 +44,7 @@ block content
         | :
         input(type="text", id="input", autofocus, size="60") 
         input(type="submit", id="send", value="Send")
-        script
+        script(type='text/javascript').
           var nick = chat_generate_nick(); 
           document.getElementById('nick-nodechat').value = nick;
           chat_create_nodejs(nick); 
